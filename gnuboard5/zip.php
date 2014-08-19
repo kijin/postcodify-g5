@@ -42,6 +42,8 @@ include_once(G5_PATH.'/head.sub.php');
 
 <script type="text/javascript">
     
+    window.resizeTo(650, 600);
+    
     $("#postcodify").postcodify({
         insertPostcode6 : "#entry_postcode6",
         insertAddress : "#entry_address",
