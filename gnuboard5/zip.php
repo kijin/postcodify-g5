@@ -1,6 +1,6 @@
 <?php
 
-include_once('./_common.php');
+include_once('../../common.php');
 
 $g5['title'] = '우편번호 검색';
 
@@ -41,8 +41,6 @@ include_once(G5_PATH.'/head.sub.php');
 <!-- Postcodify 설정 -->
 
 <script type="text/javascript">
-    
-    window.resizeTo(650, 600);
     
     $("#postcodify").postcodify({
         insertPostcode6 : "#entry_postcode6",
