@@ -1,6 +1,7 @@
 <?php
 
-include_once('./_common.php');
+$g4_path = '../..';
+include_once($g4_path . '/common.php');
 
 $g4['title'] = '우편번호 검색';
 
@@ -43,8 +44,6 @@ include_once($g4['path'].'/head.sub.php');
 
 <script type="text/javascript">
     
-    window.resizeTo(650, 600);
-    
     $("#postcodify").postcodify({
         insertPostcode6 : "#entry_postcode6",
         insertAddress : "#entry_address",
@@ -57,7 +56,7 @@ include_once($g4['path'].'/head.sub.php');
         hideSummary : true,
         mapLinkProvider : "daum",
         afterSelect : function(selectedEntry) {
-            var of = window.opener.$("form[name="+frm_name+"]");
+            var of = window.opener.$("body");
             var pc = $("#entry_postcode6").val().split("-");
             if (pc.length == 2) {
                 of.find("input[name="+frm_zip1+"]").val(pc[0]);
